@@ -46,7 +46,7 @@ func Controller(w http.ResponseWriter, r *http.Request) {
 
 	if r.Method == "POST" {
 
-		newProduct := dtos.CreateProductDto{}
+		newProduct := dtos.CreateProductsDto{}
 
 		decoder := json.NewDecoder(body)
 

@@ -6,7 +6,7 @@ import (
 	"log"
 )
 
-func (u Repository) Create(model products.Model) (products.Model, error) {
+func (r Repository) Create(model products.Model) (products.Model, error) {
 
 	log.Printf("Create product from usecases")
 
@@ -16,7 +16,7 @@ func (u Repository) Create(model products.Model) (products.Model, error) {
 
 	model.ID = newProductId
 
-	model, err := u.productsRepository.Create(model)
+	model, err := r.productsRepository.Create(model)
 
 	if err != nil {
 		return products.Model{}, err

@@ -7,7 +7,7 @@ import (
 )
 
 type ProductService interface {
-	Create(createProductDto dtos.CreateProductDto) (products.Model, error)
+	Create(createProductDto dtos.CreateProductsDto) (products.Model, error)
 }
 
 type Services struct {

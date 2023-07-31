@@ -1,6 +1,7 @@
 package products
 
 import (
+	"database/sql"
 	"github.com/lumiano/go-expert/database/domain/products"
 	"log"
 )
@@ -17,7 +18,12 @@ func (r Repository) Create(model products.Model) (products.Model, error) {
 		return products.Model{}, err
 	}
 
-	defer stmt.Close()
+	defer func(stmt *sql.Stmt) {
+		err := stmt.Close()
+		if err != nil {
+
+		}
+	}(stmt)
 
 	_, err = stmt.Exec(model.ID, model.Name, model.Price)
 

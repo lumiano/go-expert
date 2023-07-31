@@ -7,7 +7,7 @@ import (
 	"github.com/lumiano/go-expert/database/services/products/dtos"
 )
 
-func (s Services) Create(createProductDto dtos.CreateProductDto) (products.Model, error) {
+func (s Services) Create(createProductDto dtos.CreateProductsDto) (products.Model, error) {
 
 	validator := validator.New()
 
