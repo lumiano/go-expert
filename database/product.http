@@ -1,0 +1,8 @@
+POST localhost:8080/products
+
+{
+    "name": "Product 1",
+    "price": 100.00
+
+}
+```
